@@ -1,0 +1,44 @@
+﻿<Window x:Class="Sklad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sklad"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu x:Name="main_menu" IsMainMenu="True">
+            <MenuItem Header="Show">
+                <MenuItem Click="Show_All_Click" x:Name="Show_All" Header="All"></MenuItem>
+                <MenuItem Click="Show_All_Types_Click" x:Name="Show_All_Types" Header="All Types"></MenuItem>
+                <MenuItem Click="Show_All_Sup_Click" x:Name="Show_All_Sup" Header="All Suppliers"></MenuItem>
+                <MenuItem Click="Show_MaxCount_Click" x:Name="Show_MaxCount" Header="Max count of 1 product"></MenuItem>
+                <MenuItem Click="Show_MinCount_Click" x:Name="Show_MinCount" Header="Min count of 1 product"></MenuItem>
+                <MenuItem Click="Show_MinCost_Click" x:Name="Show_MinCost" Header="Min cost product"></MenuItem>
+                <MenuItem Click="Show_MaxCost_Click" x:Name="Show_MaxCost" Header="Max cost product"></MenuItem>
+                <MenuItem Header="Set Type">
+                    <StackPanel Orientation="Horizontal">
+                        <Label>Set Type</Label>
+                        <TextBox x:Name="Type_TextBlock"  Width="100"  VerticalAlignment="Center" TextAlignment="Center"/>
+                        <Button Click="Confirm_Type_Click" Height="18">Confirm</Button>
+                    </StackPanel>
+                </MenuItem>
+                <MenuItem Header="Set Supplier">
+                    <StackPanel Orientation="Horizontal">
+                        <Label>Set Type</Label>
+                        <TextBox x:Name="Supplier_TextBlock"  Width="100"  VerticalAlignment="Center" TextAlignment="Center"/>
+                        <Button Click="Confirm_Supplier_Click" Height="18">Confirm</Button>
+                    </StackPanel>
+                </MenuItem>
+                <MenuItem Header="Oldest" Click="Old_Click"></MenuItem>
+                <MenuItem Header="Group by Type" Click="GroupType_Click"></MenuItem>
+            </MenuItem>
+            
+        </Menu>
+
+        <StackPanel x:Name="Stack_Products" Orientation="Horizontal" Margin="0,20,0,0">
+
+        </StackPanel>
+
+    </Grid>
+</Window>
